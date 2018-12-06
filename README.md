@@ -14,6 +14,7 @@ git clone "(url)"
 
 1. Open the library in the terminal and run setup file as root - 
 ```bash
+chmod 755 setup.sh
 sudo ./setup.sh
 ```
 2. Include the header file in your c++ program -
