@@ -19,14 +19,20 @@ sudo ./setup.sh
 ```
 2. Include the header file in your c++ program -
 ```c++
-#include<header_file_name.h>
+#include<lib_name.h>
 ```
 
 *Windows or MacOS :*
 
 1. Copy the header files in your local project directory.
 
-2. Include the header file in your c++ program -
+2. In the header file "lib_name.h" change - 
+```c++ 
+#include<lib_name_func_def.h> /*to*/ 
+#include"lib_name_func_def.h" 
+```
+
+3. Include the header file in your c++ program -
 ```c++
-#include"header_file_name.h"
+#include"lib_name.h"
 ```
