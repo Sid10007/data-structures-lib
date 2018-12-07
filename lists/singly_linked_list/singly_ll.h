@@ -8,6 +8,10 @@ class node {
 	public :
 		t data;
 		node* next;
+		node() {
+			data = 0;
+			next = NULL;
+		}
 };
 
 template<class t>
