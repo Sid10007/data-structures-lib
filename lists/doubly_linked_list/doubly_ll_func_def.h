@@ -1,29 +1,34 @@
-#ifndef SINGLY_LL_FUNC_DEF
-#define SINGLY_LL_FUNC_DEF
+#ifndef DOUBLY_FUNC_DEF
+#define DOUBLY_FUNC_DEF
 
 template<class t>
-sll<t>::sll() {
+dll<t>::dll() {
 	head = NULL;
 }
 
 template<class t>
-void sll<t>::append(t val) {
+void dll<t>::append(t val) {
 	node<t>* new_node = new node<t>;
 	node<t>** curr_node;
 	curr_node = &head;
 	
-	new_node -> next = NULL;
 	new_node -> data = val;
 
-	while(*curr_node != NULL) {
+	if(head == NULL) {
+		*curr_node = new_node;
+		return;
+	}
+
+	while((*curr_node) -> next != NULL) {
 		curr_node = &((*curr_node) -> next);
 	}
 
-	*curr_node = new_node;
+	new_node -> prev = *curr_node;
+	(*curr_node) -> next = new_node;
 }
 
-template<class t>
-void sll<t>::prepend(t val) {
+/*template<class t>
+dll<t>::prepend(t val) {
 	node<t>* new_node = new node<t>;
 
 	new_node -> data = val;
@@ -32,7 +37,7 @@ void sll<t>::prepend(t val) {
 }
 
 template<class t>
-bool sll<t>::insert_pos(t val, long pos) {
+bool dll<t>::insert_pos(t val, long pos) {
 	node<t>* new_node = new node<t>;
 	node<t>** curr_node = &head;
 	long ptr = 1;
@@ -57,7 +62,7 @@ bool sll<t>::insert_pos(t val, long pos) {
 }
 
 template<class t>
-t sll<t>::pop() {
+t dll<t>::pop() {
 	node<t>** curr_node = &head;
 
 	if(head == NULL)
@@ -74,7 +79,7 @@ t sll<t>::pop() {
 }
 
 template<class t>
-t sll<t>::delete_first() {
+t dll<t>::delete_first() {
 	if(head == NULL)
 		return -1;
 	t ret_val = head -> data;
@@ -84,7 +89,7 @@ t sll<t>::delete_first() {
 }
 
 template<class t>
-bool sll<t>::delete_val(t val) {
+bool dll<t>::delete_val(t val) {
 	node<t>** curr_node = &head;
 
 	while(*curr_node != NULL) {
@@ -100,9 +105,9 @@ bool sll<t>::delete_val(t val) {
 
 	return false;
 }
-
+*/
 template<class t>
-void sll<t>::display() {
+void dll<t>::display() {
 	node<t>* curr_node;
 	curr_node = head;
 
@@ -114,7 +119,7 @@ void sll<t>::display() {
 }
 
 template<class t>
-node<t>* sll<t>::get_head() {
+node<t>* dll<t>::get_head() {
 	return head;
 }
 

@@ -1,5 +1,5 @@
-#ifndef SINGLY_LL
-#define SINGLY_LL
+#ifndef DOUBLY_LL
+#define DOUBLY_LL
 
 using namespace std;
 
@@ -7,30 +7,31 @@ template<class t>
 class node {
 	public :
 		t data;
-		node* next;
+		node* next, prev;
 		node() {
 			data = 0;
-			next = NULL;
+			next = prev = NULL;
 		}
 };
 
 template<class t>
-class sll {
+class dll {
 	private:
 		node<t>* head;
 
 	public:
-		sll();
+		dll();
 		void append(t val);
 		void prepend(t val);
 		bool insert_pos(t val, long pos);
 		t pop();
 		t delete_first();
 		bool delete_val(t val);
+		node<t>* reverse();
 		void display();
 		node<t>* get_head();
 };
 
-#include<singly_ll_func_def.h>
+#include<doubly_ll_func_def.h>
 
 #endif
