@@ -7,11 +7,9 @@ template<class t>
 class node {
 	public :
 		t data;
-		node* next, prev;
-		node() {
-			data = 0;
-			next = prev = NULL;
-		}
+		node* next;
+		node* prev;
+		node();
 };
 
 template<class t>

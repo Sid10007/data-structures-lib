@@ -78,7 +78,11 @@ t sll<t>::delete_first() {
 	if(head == NULL)
 		return -1;
 	t ret_val = head -> data;
+
+	node<t>* temp = head;
+
 	head = head -> next;
+	delete temp;
 
 	return ret_val;
 }

@@ -22,6 +22,7 @@ int main() {
 	cout << "Popped : " << ll.pop() << "\n";
 	cout << "Popped : " << ll.pop() << "\n";
 	ll.display();
+	ll.delete_first();
 	ll.delete_val(4);
 	ll.display();
 	return 0;
