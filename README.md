@@ -1,5 +1,5 @@
 # data-structures-lib
-This contains header-only libraries for conventional data structures like stacks, queues, trees and graphs with their different implementations in c++.
+This contains header-only libraries for conventional data structures like stacks, queues, lists, trees and graphs with their different implementations in c++.
 
 main.cpp file in each of the libraries is a test driver program.
 
